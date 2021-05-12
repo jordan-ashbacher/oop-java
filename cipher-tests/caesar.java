@@ -1,7 +1,12 @@
-public class caesarcipher {
-    public String encrypt(String input, int key) {
+public class caesar {
+    public static void main (String[] args) {
 
-        StringBuilder encrypted = new StringBuilder(input);
+        System.out.println(encrypt("HELLO MY NAME IS JORDAN", 3));
+    }
+
+    public static String encrypt(String message, int key) {
+
+        StringBuilder encrypted = new StringBuilder(message);
 
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -15,8 +20,9 @@ public class caesarcipher {
                 char newChar = shiftedAlphabet.charAt(idx);
                 encrypted.setCharAt(i, newChar);
             };
-
         };
+        return encrypted.toString();
         
     };
+    
 };
